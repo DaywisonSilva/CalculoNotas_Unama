@@ -52,8 +52,8 @@ ul li:hover {
 
 section img:nth-child(1) {
     display: block;
-    margin: 20px auto;
-    width: 150px;
+    margin: 40px auto;
+    width: 300px;
 }
 
 .container {
@@ -76,6 +76,7 @@ section h1 {
     text-align: center;
     color: rgb(49, 49, 49);
 }
+
 section p {
     display: block;
     text-align: justify;
@@ -132,7 +133,8 @@ i {
     justify-content: center;
     z-index: 1;
 }
-.background-modal i{
+
+.background-modal i {
     margin-top: 20px;
     z-index: 4;
     display: block;
@@ -162,10 +164,11 @@ i {
     font-weight: bold;
 }
 
-.modal a{
+.modal a {
     color: var(--color-primary);
     text-decoration: underline;
 }
+
 .modal {
     width: 80%;
     max-width: 600px;
@@ -179,8 +182,16 @@ i {
     position: fixed;
 }
 
+.modal-buttons span {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+    color: var(--color-primary);
+    text-decoration: underline;
+    cursor: pointer;
+}
 
-.modal-buttons input{
+.modal-buttons input {
     width: 120px;
     height: 40px;
     margin: 10px auto;
@@ -189,13 +200,15 @@ i {
     font-size: 1.2em;
     outline: none;
 }
-.modal-buttons input::placeholder{
+
+.modal-buttons input::placeholder {
     text-align: center;
     color: rgb(140, 140, 140);
     text-transform: uppercase;
     font-weight: bold;
 }
-.modal-buttons button{
+
+.modal-buttons button {
     width: 120px;
     height: 50px;
     border-radius: 10px;
@@ -209,10 +222,12 @@ i {
     outline: none;
     cursor: pointer;
 }
-.modal-buttons button:active{
+
+.modal-buttons button:active {
     transform: translateY(20px);
 }
-.modal-buttons{
+
+.modal-buttons {
     width: 80%;
     height: 85vh;
     max-width: 600px;
@@ -225,7 +240,8 @@ i {
     flex-direction: column;
     justify-content: center;
 }
-.modal-conditions{
+
+.modal-conditions {
     width: 80%;
     max-width: 600px;
     height: 85vh;
@@ -240,11 +256,13 @@ i {
     padding: 40px 0;
     box-sizing: border-box;
 }
-.modal-conditions img{
+
+.modal-conditions img {
     width: 100%;
     margin: auto;
 }
-#card-calcular{
+
+#card-calcular {
     width: 150px;
     line-height: 1cm;
     border-radius: 20px;
@@ -257,10 +275,56 @@ i {
     outline: 0;
     transition: all .2s linear;
 }
-#card-calcular:active{
+
+#card-calcular:active {
     transform: translateY(10px);
 }
-.resultado{
+
+.card-ead {
+    width: 80%;
+    max-width: 600px;
+    height: 85vh;
+    background-color: rgb(255, 255, 255);
+    margin: 10vh 0;
+    border-radius: 20px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+.card-ead button,
+.card-ead input{
+    border-radius: 10px;
+    margin: 20px 0;
+}
+.card-ead button{
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(19, 196, 19), rgb(10, 121, 13));
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 10px auto;
+    letter-spacing: 3px;
+    transition: all .2s linear;
+    outline: none;
+    cursor: pointer;
+}
+.card-ead input{
+    width: 120px;
+    height: 40px;
+    margin: 10px auto;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2em;
+    outline: none;
+}
+
+.resultado {
     width: 80%;
     max-width: 600px;
     height: 85vh;
@@ -274,18 +338,21 @@ i {
     align-items: center;
     justify-content: center;
 }
-.resultado h1{
+
+.resultado h1 {
     display: block;
     padding: 40px 30px;
     box-sizing: border-box;
     text-align: center;
     color: rgb(66, 66, 66);
 }
-.resultado img{
+
+.resultado img {
     width: 80%;
     display: block;
 }
-footer{
+
+footer {
     width: 100%;
     text-align: center;
     background-color: var(--color-primary);
@@ -296,12 +363,16 @@ footer{
     position: fixed;
     bottom: 0;
 }
-footer p{
+
+footer p {
     margin: 0;
 }
-.hidden{
+
+.hidden {
     display: none;
+    visibility: hidden;
 }
+
 @media (max-width: 1100px) {
     section p {
         padding: 0 70px;
@@ -310,7 +381,8 @@ footer p{
 
 @media (max-width: 800px) {
     section img:nth-child(1) {
-        width: 80px;
+        width: 200px;
+        margin: 30px auto 0px auto;
     }
     ul {
         font-size: 1.2em;
@@ -330,7 +402,7 @@ footer p{
     .modal p {
         font-size: 1.3em;
     }
-    section{
+    section {
         margin-bottom: 100px;
         z-index: -1;
     }

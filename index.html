@@ -17,8 +17,8 @@
     <header>
 
         <ul>
-            <li><a href="#">Portal do Aluno</a></li>
-            <li><a href="#">Cursos de Extensão</a></li>
+            <li><a href="http://www.unama.br/" target="_blank">Portal do Aluno</a></li>
+            <li><a href="https://extensao.unama.br/" target="_blank">Cursos de Extensão</a></li>
 
         </ul>
     </header>
@@ -50,10 +50,11 @@
                 <img src="imagens/study.svg" alt="garota estudando">
                 <p><span>Lembre-se:</span> organize seus estudos para atingir a média de 7 pontos e ser
                     aprovado(a)!!
-                <br>
-                <a href="#" id="conditions"> Confira as condições de avaliação</a></p>
+                    <br>
+                    <a href="#" id="conditions"> Confira as condições de avaliação</a></p>
             </div>
             <div class="modal-conditions hidden">
+                <h1 style="text-align: center; width: 100%; font-size: 1.5em;">Modalidade Presencial</h1>
                 <img src="imagens/fluxograma.jpeg" alt="">
                 <button id="card-calcular">Calcular Nota</button>
             </div>
@@ -63,12 +64,29 @@
                 <input type="number" min="0" max="10" id="two" placeholder="2ª Nota">
                 <br>
                 <button id="enviar">Calcular</button>
+                <span id="ead">Clique aqui se você for da modalidade EAD</span>
+            </div>
+            <div class="card-ead hidden">
+                <label for="av1">
+                    AV1:
+                    <br>
+                    <input type="number" id="av1">
+                </label>
+
+                <label for="av2">
+                    AV2:
+                    <br>
+                    <input type="number" id="av2">
+                </label>
+                <button id="enviar-ead">Calcular</button>
+                
             </div>
             <div class="resultado hidden">
                 <h1 id="title"></h1>
                 <img src="" alt="" id="imagem">
                 <p id="text"></p>
             </div>
+
         </div>
     </main>
     <footer>

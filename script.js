@@ -13,6 +13,12 @@ document.getElementById('card-calcular').addEventListener('click', () => {
     document.getElementsByClassName('modal-buttons')[0].classList.remove('hidden');
 })
 
+document.getElementById('ead').addEventListener('click', () => {
+    document.getElementsByClassName('card-ead')[0].classList.remove('hidden');
+})
+
+
+/* MODALIDADE PRESENCIAL */
 document.getElementById('enviar').addEventListener('click', () => {
     function calcMedia() {
         let nota1 = document.getElementById('one');
@@ -21,8 +27,9 @@ document.getElementById('enviar').addEventListener('click', () => {
         nota2 = Number(nota2.value);
         if (nota1 >= 0 && nota1 <= 10 && nota2 >= 0 && nota2 <= 10) {
             let media = (nota1 + nota2) / 2;
-            console.log(nota1)
             document.getElementsByClassName('resultado')[0].classList.remove('hidden');
+            nota1.innerText = '';
+            nota2.innerText = '';
             return media;
         } else {
             alert('Digite valores válidos!')
@@ -48,6 +55,46 @@ document.getElementById('enviar').addEventListener('click', () => {
     informationCard();
 })
 
+/* MODALIDADE EAD */
+document.getElementById('enviar-ead').addEventListener('click', () => {
+    function calcMedia() {
+        let nota1 = document.getElementById('av1');
+        let nota2 = document.getElementById('av2');
+        nota1 = Number(nota1.value);
+        nota2 = Number(nota2.value);
+        if (nota1 >= 0 && nota1 <= 10 && nota2 >= 0 && nota2 <= 10) {
+            let mediaFinal = nota1*0.4 + nota2*0.6;
+            console.log(mediaFinal);
+            document.getElementsByClassName('resultado')[0].classList.remove('hidden');
+            nota1.innerText = '';
+            nota2.innerText = '';
+            return mediaFinal;
+        } else {
+            alert('Digite valores válidos!')
+            close();
+        }
+    }
+    function informationCard() {
+        let media = calcMedia();
+        let title = document.getElementById('title');
+        let img = document.getElementById('imagem');
+        let text = document.getElementById('text');
+        if (media < 4) {
+            title.innerText = 'Que pena, você reprovou! Organize seus estudos para obter a aprovação.';
+            img.src='imagens/sad_face.svg'
+        }else if(media >= 4 && media < 7){
+            title.innerText = `Você está na prova final, e precisa de ${10 - media} pontos para ser aprovado(a)!`;
+            img.src='imagens/atencao.svg'
+        }else{
+            title.innerText = 'Parabéns!! Você está aprovado.'
+            img.src = 'imagens/happy_face.svg'
+        }
+    }
+    informationCard();
+})
+
+/* ***************************** */
+
 document.getElementsByClassName('close')[0].addEventListener('click', close);
 
 function close(){
@@ -56,6 +103,16 @@ function close(){
     document.getElementsByClassName('modal-conditions')[0].classList.add('hidden');
     document.getElementsByClassName('modal-buttons')[0].classList.add('hidden');
     document.getElementsByClassName('resultado')[0].classList.add('hidden');
+    document.getElementsByClassName('card-ead')[0].classList.add('hidden');
+
+    let input1 = document.getElementById('one');
+    let input2 = document.getElementById('two');
+    let input1ead = document.getElementById('av1');
+    let input2ead = document.getElementById('av2');
+    input1.value = '';
+    input2.value = '';
+    input1ead.value = '';
+    input2ead.value = '';
 }
 
 
