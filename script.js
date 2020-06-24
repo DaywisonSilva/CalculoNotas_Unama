@@ -23,10 +23,13 @@ document.getElementById('enviar').addEventListener('click', () => {
     function calcMedia() {
         let nota1 = document.getElementById('one');
         let nota2 = document.getElementById('two');
-        nota1 = Number(nota1.value);
-        nota2 = Number(nota2.value);
-        if (nota1 >= 0 && nota1 <= 10 && nota2 >= 0 && nota2 <= 10) {
-            let media = (nota1 + nota2) / 2;
+        nota1Number = Number(nota1.value);
+        nota2Number = Number(nota2.value);
+        if (nota1.value == '' && nota2.value == '') {
+            alert('Preencha no mínimo um dos campos')
+        } else if (nota1Number >= 0 && nota1Number <= 10 && nota2Number >= 0 && nota2Number <= 10) {
+
+            let media = (nota1Number + nota2Number) / 2;
             document.getElementsByClassName('resultado')[0].classList.remove('hidden');
             nota1.innerText = '';
             nota2.innerText = '';
@@ -43,11 +46,11 @@ document.getElementById('enviar').addEventListener('click', () => {
         let text = document.getElementById('text');
         if (media < 4) {
             title.innerText = 'Que pena, você reprovou! Organize seus estudos para obter a aprovação.';
-            img.src='imagens/sad_face.svg'
-        }else if(media >= 4 && media < 7){
+            img.src = 'imagens/sad_face.svg'
+        } else if (media >= 4 && media < 7) {
             title.innerText = `Você está na prova final, e precisa de ${10 - media} pontos para ser aprovado(a)!`;
-            img.src='imagens/atencao.svg'
-        }else{
+            img.src = 'imagens/atencao.svg'
+        } else {
             title.innerText = 'Parabéns!! Você está aprovado.'
             img.src = 'imagens/happy_face.svg'
         }
@@ -60,10 +63,12 @@ document.getElementById('enviar-ead').addEventListener('click', () => {
     function calcMedia() {
         let nota1 = document.getElementById('av1');
         let nota2 = document.getElementById('av2');
-        nota1 = Number(nota1.value);
-        nota2 = Number(nota2.value);
-        if (nota1 >= 0 && nota1 <= 10 && nota2 >= 0 && nota2 <= 10) {
-            let mediaFinal = nota1*0.4 + nota2*0.6;
+        nota1Number = Number(nota1.value);
+        nota2Number = Number(nota2.value);
+        if (nota1.value == '' && nota2.value == '') {
+            alert('Preencha no mínimo um dos campos');
+        } else if (nota1Number >= 0 && nota1Number <= 10 && nota2Number >= 0 && nota2Number <= 10) {
+            let mediaFinal = nota1Number * 0.4 + nota2Number * 0.6;
             console.log(mediaFinal);
             document.getElementsByClassName('resultado')[0].classList.remove('hidden');
             nota1.innerText = '';
@@ -81,11 +86,11 @@ document.getElementById('enviar-ead').addEventListener('click', () => {
         let text = document.getElementById('text');
         if (media < 4) {
             title.innerText = 'Que pena, você reprovou! Organize seus estudos para obter a aprovação.';
-            img.src='imagens/sad_face.svg'
-        }else if(media >= 4 && media < 7){
+            img.src = 'imagens/sad_face.svg'
+        } else if (media >= 4 && media < 7) {
             title.innerText = `Você está na prova final, e precisa de ${10 - media} pontos para ser aprovado(a)!`;
-            img.src='imagens/atencao.svg'
-        }else{
+            img.src = 'imagens/atencao.svg'
+        } else {
             title.innerText = 'Parabéns!! Você está aprovado.'
             img.src = 'imagens/happy_face.svg'
         }
@@ -97,7 +102,7 @@ document.getElementById('enviar-ead').addEventListener('click', () => {
 
 document.getElementsByClassName('close')[0].addEventListener('click', close);
 
-function close(){
+function close() {
     document.getElementsByClassName('background-modal')[0].classList.add('hidden');
     document.getElementsByClassName('modal')[0].classList.add('hidden');
     document.getElementsByClassName('modal-conditions')[0].classList.add('hidden');
