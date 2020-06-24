@@ -33,6 +33,7 @@ document.getElementById('enviar').addEventListener('click', () => {
             document.getElementsByClassName('resultado')[0].classList.remove('hidden');
             nota1.innerText = '';
             nota2.innerText = '';
+            console.log(media);
             return media;
         } else {
             alert('Digite valores válidos!')
@@ -48,7 +49,7 @@ document.getElementById('enviar').addEventListener('click', () => {
             title.innerText = 'Que pena, você reprovou! Organize seus estudos para obter a aprovação.';
             img.src = 'imagens/sad_face.svg'
         } else if (media >= 4 && media < 7) {
-            title.innerText = `Você está na prova final, e precisa de ${10 - media} pontos para ser aprovado(a)!`;
+            title.innerText = `Você está na prova final, e precisa de ${(10 - media).toFixed(2)} pontos para ser aprovado(a)!`;
             img.src = 'imagens/atencao.svg'
         } else {
             title.innerText = 'Parabéns!! Você está aprovado.'
@@ -69,10 +70,10 @@ document.getElementById('enviar-ead').addEventListener('click', () => {
             alert('Preencha no mínimo um dos campos');
         } else if (nota1Number >= 0 && nota1Number <= 10 && nota2Number >= 0 && nota2Number <= 10) {
             let mediaFinal = nota1Number * 0.4 + nota2Number * 0.6;
-            console.log(mediaFinal);
             document.getElementsByClassName('resultado')[0].classList.remove('hidden');
             nota1.innerText = '';
             nota2.innerText = '';
+            console.log(mediaFinal);
             return mediaFinal;
         } else {
             alert('Digite valores válidos!')
@@ -88,7 +89,7 @@ document.getElementById('enviar-ead').addEventListener('click', () => {
             title.innerText = 'Que pena, você reprovou! Organize seus estudos para obter a aprovação.';
             img.src = 'imagens/sad_face.svg'
         } else if (media >= 4 && media < 7) {
-            title.innerText = `Você está na prova final, e precisa de ${10 - media} pontos para ser aprovado(a)!`;
+            title.innerText = `Você está na prova final, e precisa de ${(10 - media).toFixed(2)} pontos para ser aprovado(a)!`;
             img.src = 'imagens/atencao.svg'
         } else {
             title.innerText = 'Parabéns!! Você está aprovado.'
