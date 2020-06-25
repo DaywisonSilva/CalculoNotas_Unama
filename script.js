@@ -1,20 +1,37 @@
 document.getElementsByClassName('button')[0].addEventListener('click', () => {
-    document.getElementsByClassName('background-modal')[0].classList.remove('hidden');
-    document.getElementsByClassName('modal')[0].classList.remove('hidden');
+    setTimeout(
+        function () {
+            document.getElementsByClassName('background-modal')[0].classList.remove('hidden');
+            document.getElementsByClassName('modal')[0].classList.remove('hidden');
+            document.getElementById('section-one').classList.add('blur');
+        }, 300
+    )
 })
 
 
 document.getElementById('conditions').addEventListener('click', () => {
-    document.getElementsByClassName('modal-conditions')[0].classList.remove('hidden');
+    setTimeout(
+        function () {
+            document.getElementsByClassName('modal-conditions')[0].classList.remove('hidden');
+        }, 300
+    )
 })
 
 
 document.getElementById('card-calcular').addEventListener('click', () => {
-    document.getElementsByClassName('modal-buttons')[0].classList.remove('hidden');
+    setTimeout(
+        function () {
+            document.getElementsByClassName('modal-buttons')[0].classList.remove('hidden');
+        }, 300
+    )
 })
 
 document.getElementById('ead').addEventListener('click', () => {
-    document.getElementsByClassName('card-ead')[0].classList.remove('hidden');
+    setTimeout(
+        function () {
+            document.getElementsByClassName('card-ead')[0].classList.remove('hidden');
+        }, 300
+    )
 })
 
 
@@ -110,6 +127,7 @@ function close() {
     document.getElementsByClassName('modal-buttons')[0].classList.add('hidden');
     document.getElementsByClassName('resultado')[0].classList.add('hidden');
     document.getElementsByClassName('card-ead')[0].classList.add('hidden');
+    document.getElementById('section-one').classList.remove('blur');
 
     let input1 = document.getElementById('one');
     let input2 = document.getElementById('two');
