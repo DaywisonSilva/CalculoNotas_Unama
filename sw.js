@@ -4,8 +4,18 @@ self.addEventListener('install', e => {
       return cache.addAll([
         '/',
         '/index.html',
-        '/CSS/main.css',
-        '/Arquivos/logo-flexblog.png',
+        '/style.css',
+        '/src/index.js',
+        '/script.js',
+        '/imagens/atencao.svg',
+        '/imagens/happy_face.svg',
+        '/imagens/sad_face.svg',
+        '/imagens/study.svg',
+        '/imagens/undraw_winners_ao2o.svg',
+        '/imagens/background.jpg',
+        '/imagens/fluxograma.jpeg',
+        '/imagens/icone-unama.png',
+        '/imagens/unama-logo-site.png',
       ]);
     })
   );
