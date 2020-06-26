@@ -1,0 +1,18 @@
+{
+    "lang": "pt",
+    "dir": "ltr",
+    "name": "Calculo de Notas - Unama",
+    "short_name": "Unama - Notas",
+    "icons": [
+      {
+        "src": "\/imagens\/icone-unama.png",
+        "sizes": "192x192",
+        "type": "image\/png"
+      }
+    ],
+    "theme_color": "#1a1a1a",
+    "background_color": "#1a1a1a",
+    "start_url": "/https://daywisonsilva.github.io/CalculoNotas_Unama",
+    "display": "standalone",
+    "orientation": "natural"
+  }

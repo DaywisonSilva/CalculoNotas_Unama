@@ -22,6 +22,7 @@ document.getElementById('card-calcular').addEventListener('click', () => {
     setTimeout(
         function () {
             document.getElementsByClassName('modal-buttons')[0].classList.remove('hidden');
+            document.getElementsByClassName('modal-conditions')[0].classList.add('hidden');
         }, 300
     )
 })
